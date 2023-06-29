@@ -1,0 +1,18 @@
+# node_modules
+node_modules
+
+# logs
+*.log
+*/logs/*
+
+# env
+.env
+.env.local
+
+# build output
+/dist
+/build
+
+
+# local storage
+*.rdb
