@@ -6,3 +6,5 @@ const router = Router();
 router.post('/signup', UserController.signup);
 
 router.post('/greet', UserController.greet);
+
+export default router

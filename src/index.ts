@@ -45,10 +45,10 @@ class App {
 
     public start(port ?: string|number) {
         this.app.listen(port ?? this.port, () => {
-            logger.info(`=================================`);
-            logger.info(`======= ENV: ${this.env} =======`);
-            logger.info(`🚀 App listening on the port ${port ?? this.port}`);
-            logger.info(`=================================`);
+            logger?.info(`=================================`);
+            logger?.info(`======= ENV: ${this.env} =======`);
+            logger?.info(`🚀 App listening on the port ${port ?? this.port}`);
+            logger?.info(`=================================`);
         });
     }
     

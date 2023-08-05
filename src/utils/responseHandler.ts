@@ -1,7 +1,7 @@
 import { AllResponseDatas, ErrorResponseData, NewResponse , ServerErrorResponse, SeverResponseData, SuccessResponseDatas} from "src/types/response";
 import { Response } from "express";
 class ReponseHandler{
-    private response : Response;
+    private response : Response | undefined;
 
     public tieResponse(req: any, res: Response, next: any) {
         this.response = res;
