@@ -1,3 +1,4 @@
+import 'module-alias/register';
 import App from "@/src/index"
 import UserRouter from '@/src/routes/user'
 
