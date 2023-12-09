@@ -8,8 +8,8 @@ moduleAlias.addAliases({
 
 moduleAlias()
 
-import App from "@/src/index"
-import UserRouter from '@/src/routes/user'
+import App from "@/index"
+import UserRouter from '@/routes/user'
 
 const app = new App()
 app.useRoute('/user',UserRouter)

@@ -1,6 +1,6 @@
-import redisClient from "@/src/services/redis";
-import sendMessage from "@/src/services/mailer";
-import twilioClient from "@/src/services/twilio";
+import redisClient from "@/services/redis";
+import sendMessage from "@/services/mailer";
+import twilioClient from "@/services/twilio";
 import { randomBytes } from "crypto";
 
 export function generateVerificationCode(): string {

@@ -1,4 +1,4 @@
-import { AllResponseDatas, ErrorResponseData, NewResponse , ServerErrorResponse, SeverResponseData, SuccessResponseDatas} from "src/types/response";
+import { AllResponseDatas, ErrorResponseData, NewResponse , ServerErrorResponse, SeverResponseData, SuccessResponseDatas} from "@/types/response";
 import { Response } from "express";
 class ReponseHandler{
     private response : Response | undefined;
@@ -41,16 +41,16 @@ class ReponseHandler{
     }
 
     public send(data: NewResponse<AllResponseDatas>): void{
-        this.response.status(data.code ?? 200).json(data);
+        this.response?.status(data.code ?? 200).json(data);
     }
     public sendSuccess(data: SuccessResponseDatas, message?: string, code?: number): void{
-        this.response.status(code ?? 200).json(this.successJson(data, message, code));
+        this.response?.status(code ?? 200).json(this.successJson(data, message, code));
     }
     public sendError(data: ErrorResponseData, message?: string, code?: number): void{
-        this.response.status(code ?? 400).json(this.errorJson(data, message, code));
+        this.response?.status(code ?? 400).json(this.errorJson(data, message, code));
     }
     public sendServerError(data: SeverResponseData, message?: string, code?: number): void{
-        this.response.status(code ?? 500).json(this.serverErrorJson(data, message, code));
+        this.response?.status(code ?? 500).json(this.serverErrorJson(data, message, code));
     }
 }
 
